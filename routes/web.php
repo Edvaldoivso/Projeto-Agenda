@@ -26,6 +26,8 @@ use Illuminate\Support\Facades\Route;
 
 //Route :: view ('/jogos','jogos',['name'=>'GTA']);
 
-Route :: get ('/jogos/{name?}' , function($name = null){
-    return view('jogos',['nomeJogo'=>$name]);
-});
+//Route :: get ('/jogos/{name?}' , function($name = null){
+//    return view('jogos',['nomeJogo'=>$name]);
+//});
+
+Route :: view('Calendar','Calendar');
