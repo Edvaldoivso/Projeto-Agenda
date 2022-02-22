@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class Cors
 {
+    
     /**
      * Handle an incoming request.
      *
@@ -15,18 +16,16 @@ class Cors
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
+
     public function handle(Request $request, Closure $next)
     {
-           return $next($request);
+
+     return $next($request)
+                
+                ->header("Access-Control-Allow-Origin","*")
+                ->header("Access-Control-Allow-Methods","PUT, GET, POST, DELETE, PATHS, OPTIONS")
+                ->header("Access-Control-Allow-Headers","*");     
     }
-}
-
-
+};
 
  
-
-
-
-
-
-

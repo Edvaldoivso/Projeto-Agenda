@@ -8,37 +8,37 @@
     <title>Agendamento</title>
 
 <!--Scripts-->
+<script src=" {{ asset('site/jquery.js') }} "></script>
+<script src=" {{ asset('site/datepicker.js') }} "></script>
+<script src=" {{ asset('site/datepicker.css') }} "></script>
 
 
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous|use-credentials"></script>
+</head>
+<body>
+<h1>Calendario</h1>
 
-<script  type="text/javascript" href="resources\js\jquery-ui.min.js" 
-crossorigin="anonymous|use-credentials"></script>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
 
-<link rel="stylesheet" type="text/css" href="C:\Users\Edvaldo\Desktop\Fares\Agendamento\AgendaFares\Agenda\resources\css\jquery-ui.min.css">
+
+$( "body"  ).on('change', ()=>{
+   let valor = $('#datepicker').val()
+  alert(valor)
+});
+
+
+
+  </script>
 
 
 
 </head>
 <body>
-    <h1>Calendario</h1>
-<form>
-<label for="Calendar">Calendario
-<input id="Calendario" type="text">
-
-<script>
-
-$("#Calendario").datepiker();
-</script>
-</form>
-
-
-
-
-
-
+ 
+<p>Date: <input type="text" id="datepicker"></p>
+ 
+ 
 </body>
 </html>

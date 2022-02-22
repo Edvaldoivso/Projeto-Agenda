@@ -11,7 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+    .js('resources/js/app.js', 'public/js')
+    .scripts('node_modules/Jquery/dist/Jquery.js','public/site/jquery.js')
+    .scripts('node_modules/jquery-ui/ui/widgets/datepicker.js','public/site/datepicker.js')
+    .scripts('node_modules/jquery-ui/themes/base/datepicker.css','public/site/datepicker.css');
+

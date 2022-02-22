@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Facade;
 
 return [
 
+
+    'paths' => ['api/*'],
+    'allowed_methods' => ['*'],
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name

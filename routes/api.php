@@ -15,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+    return $request->user()
+    ->header("Access-Control-Allow-Origin","*")
+    ->header("Access-Control-Allow-Methods","PUT, GET, POST, DELETE, OPTIONS")
+    ->header("Access-Control-Allow-Headers","*");
 });
+
+
+
+
+
