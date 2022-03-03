@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ControllerJogos;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,10 +24,13 @@ use Illuminate\Support\Facades\Route;
 //    return "Estou rodando Laravel";
 //});
 
-//Route :: view ('/jogos','jogos',['name'=>'GTA']);
+//Route :: view ('/jogos','jogos',['$nomeJogo'=>'GTA']);
 
 //Route :: get ('/jogos/{name?}' , function($name = null){
 //    return view('jogos',['nomeJogo'=>$name]);
 //});
 
-Route :: view('Calendar','Calendar');
+//Route :: view('Calendar','Calendar');
+
+//Consumindo uma View passando por um controller
+Route :: get('/jogos',[ControllerJogos::class,'index']);
