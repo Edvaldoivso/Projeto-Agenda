@@ -13,7 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_jogos', function (Blueprint $table) {
+        Schema::create('jogos', function (Blueprint $table) {
+
             $table->id('identidade',2);
             $table->string('NomeJogo',15);
             $table->double('ValorJogo',8,2);
