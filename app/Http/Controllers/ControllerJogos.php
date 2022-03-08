@@ -15,19 +15,24 @@ class ControllerJogos extends Controller
   //dd($Jogos);
 
   return view('jogos.index',['Jogos'=> $Jogos]);
-      
-
-
-
- 
-
-
-  
-
-
-
 
 
     }
+
+public function create(){
+    return view('jogos.create');
+}
+
+
+public function store(Request $request){
+
+//dd($request);
+
+Jogo :: create($request ->all());
+return redirect()->route('jogos-index');
+
+}
+
+
 }
  

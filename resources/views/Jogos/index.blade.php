@@ -34,4 +34,15 @@ Novo Title
 
 </table>
 
+
+
+</br>
+</br>
+
+<div class="form-group">
+  
+  <a href="{{ route('jogos-create') }}" class="btn  btn-success">Novo Jogo</a>
+</div>
+
+
 @endsection
