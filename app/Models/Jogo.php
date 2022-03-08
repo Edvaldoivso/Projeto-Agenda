@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Jogo extends Model
 {
     use HasFactory;
+protected $fillable = [
 
-    protected $fillable = [
-          'identidade',
-           'NomeJogo',
-            'ValorJogo',
-            'Classificação',
-            
-    ];
+    'identificacao',
+    'nome',
+    'categoria',
+    'ano_criacao',
+    'valor',
+];            
+
 }

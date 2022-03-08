@@ -11,10 +11,10 @@ class ControllerJogos extends Controller
         //dd('Agora Foi Diaxo');
      
   $Jogos = Jogo :: all();
-   // dd($Jogos);
+   
+  //dd($Jogos);
 
-
-  return view('jogos.index');
+  return view('jogos.index',['Jogos'=> $Jogos]);
       
 
 

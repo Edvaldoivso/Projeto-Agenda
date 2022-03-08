@@ -23,12 +23,12 @@ Novo Title
     </tr>
   </thead>
 
-  @foreach($Jogo)
+  @foreach( $Jogos as $jogo )
   <tr>
-      <th scope="row"> {{$Jogo -> NomeJogo}}  </th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>twitter</td>
+      <th scope="row">{{ $jogo -> identificacao}}</th>
+      <td>{{ $jogo -> nome}}</td>
+      <td>{{ $jogo -> categoria}}</td>
+      <td>{{ $jogo -> ano_criacao}}</td>
     </tr>
  @endforeach
 
