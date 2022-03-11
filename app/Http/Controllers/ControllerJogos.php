@@ -65,6 +65,6 @@ class ControllerJogos extends Controller
     public function destroy($identificacao)
     {
           Jogo::where('identificacao', $identificacao)->delete();
-        return redirect()->route('jogos-index');
+        return redirect()->route('jogos-ind ex');
     }
 }
